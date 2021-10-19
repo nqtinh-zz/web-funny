@@ -62,13 +62,8 @@ function moveButton() {
 
 init()
 
-var n = 0;
 $('#no').mousemove(function() {
-    if (n < 1)
-        switchButton();
-    else
-        moveButton();
-    n++;
+    moveButton();
 });
 $('#no').click(() => {
     if (screen.width>=900)
