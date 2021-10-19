@@ -21,7 +21,7 @@ function firstQuestion(){
     $('.content').hide();
     Swal.fire({
         title: CONFIG.introTitle,
-        text: CONFIG.introDesc,
+        html: CONFIG.introDesc,
         imageUrl: 'img/lookMe.png',
         imageWidth: 300,
         imageHeight: 300,
@@ -29,7 +29,7 @@ function firstQuestion(){
         imageAlt: 'Custom image',
         confirmButtonText: CONFIG.btnIntro
       }).then(function(){
-        var audio = new Audio('sound/sound.mp3');
+        var audio = new Audio('sound/sound.m4a');
         audio.play();
         $('.content').show(200);
       })
