@@ -66,7 +66,7 @@ var n = 0;
 $('#no').mousemove(function() {
     if (n < 1)
         switchButton();
-    if (n > 1)
+    else
         moveButton();
     n++;
 });
