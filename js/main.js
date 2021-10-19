@@ -29,7 +29,8 @@ function firstQuestion(){
         imageAlt: 'Custom image',
         confirmButtonText: CONFIG.btnIntro
       }).then(function(){
-
+        var audio = new Audio('sound/duck.mp3');
+        audio.play();
         $('.content').show(200);
       })
 }
@@ -63,8 +64,6 @@ init()
 
 var n = 0;
 $('#no').mousemove(function() {
-    var audio = new Audio('sound/sound.mp3');
-    audio.play();
     if (n < 1)
         switchButton();
     if (n > 1)
@@ -72,8 +71,6 @@ $('#no').mousemove(function() {
     n++;
 });
 $('#no').click(() => {
-    var audio = new Audio('sound/sound.mp3');
-    audio.play();
     if (screen.width>=900)
         switchButton();
 })
